@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0 auto;
+  max-width: 1020px;
+}
+
+/* haeder */
+header {
+  background-color: rgb(45, 48, 58);
+  height: 89px;
+}
+
+.row {
+  display: -webkit-flex;
+  display: flex;
+}
+
+nav {
+  padding: 0 40px;
+  height: 89px;
+}
+
+nav div {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.top-logo {
+  padding-top: 35px;
+}
+
+.top-logo span {
+  color: red;
+}
+
+.top-logo h1 {
+  line-height: 17px;
+  margin: 0;
+  font-size: 25px;
+  height: 25px;
+  font-weight: bold;
+  color: white;
+}
+.top-nav {
+  padding-top: 45px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  text-align: right;
+}
+.top-nav li {
+  display: inline;
+
+  padding-left: 25px;
+}
+
+.top-nav ul {
+  line-height: 10px;
+  margin: 0;
+}
+
+.top-stip {
+  height: 6px;
+  background-color: yellow;
+}
+/* end header */
+
+/* slider */
+.slider {
+  background-color: rgb(240, 108, 100);
+  height: 600px;
+  max-width: 100%;
+  padding: 0 40px;
+  align-items: center;
+}
+
+.left-pointer {
+  padding-left: 2px;
+  flex-basis: 72px;
+}
+
+.iphone-vertical {
+  
+  flex-basis: 322px;
+}
+.iphone-horizontal {
+  flex-basis: 555px
+}
+
+.right-pointer {
+  
+ 
+}
+
+.out-services-stip {
+    height: 6px;
+    background-color: rgb(234, 103, 107);
+  }
+/* end slider */
+.our-services {
+  background-color: rgb(242, 242, 242);
+  max-width: 100%;
+  height: 496px;
+}
+
+
+.Bg_Bottom {
+    background-color: rgb(234, 103, 107);
+    position: absolute;
+    left: 0px;
+    top: 680px;
+    width: 1020px;
+    height: 15px;
+    z-index: 44;
+  }
+  
