@@ -53,7 +53,6 @@ nav div {
 }
 .top-nav li {
   display: inline;
-
   padding-left: 25px;
 }
 
@@ -104,16 +103,84 @@ nav div {
   background-color: rgb(242, 242, 242);
   max-width: 100%;
   height: 496px;
+  padding: 0 20px 0 40px;
 }
 
+.out-text-top{
+    padding-top: 60px;
+    height: 155px;
+
+}
+
+.large-text-out{
+    font-size: 30px;
+}
+
+.small-text-out{
+    font-size: 18px;
+    padding-top: 20px;
+    line-height: 30px;
+}
+.our-services-container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 246px;
+    padding-top: 5px;
+}
+
+.our-services-container .main-item{
+     flex: 0 1 33.33%;
+}
+.main-item{
+    height:123px; 
+    display: flex;
+    
+}
+.circle, .item {
+   
+    
+}
+.circle {
+    flex-basis: 80px;
+    background-image: url(./assets/ellipse.png);
+    background-repeat: no-repeat;
+}
+
+  
+.sideitem{	
+	flex-basis:80px; 
+	flex-shrink:0; 				   	
+	display: flex;
+    flex-direction: column;
+    flex-basis: 233px;
+}
+
+.item-top{
+	line-height: 15px;
+	min-height:25px;
+    font-size: 18px;
+    font-weight: black;
+}
+
+.item-bot{
+    line-height: 22px;
+    min-height: 90px;
+    font-size: 12px;
+    font-weight: Sample;
+}
 
 .Bg_Bottom {
-    background-color: rgb(234, 103, 107);
+    background-color: rgb(255, 255, 255);
     position: absolute;
     left: 0px;
-    top: 680px;
+    top: 1189px;
     width: 1020px;
-    height: 15px;
-    z-index: 44;
+    height: 6px;
+    z-index: 3;
+  }
+  
+  .end-services-stip {
+    height: 6px;
+    background-color: rgb(255, 255, 255);
   }
   
