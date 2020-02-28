@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap');
+
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0 auto;
+    max-width: 1020px;
+  }
+
+.portfolio-wrapper{
+    background-color: #2d303a;
+    height: 864px;
+    /* padding: 0 40px 0 40px; */
+    padding-left: 40px;
+}
+
+.portfolio-head{
+    
+}
+
+h3{
+    font-size: 30px;
+    color:  rgb(102, 109, 137);
+    font-weight: 900;
+    margin:0;
+    padding-top: 61px;
+}
+.portfolio-text{
+    padding-top: 24px;
+}
+
+p{
+    color:  rgb(102, 109, 137);
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.portfolio-seleciton-block{
+    display: flex;
+    padding-top: 16px;
+}
+
+.portfolio-seleciton-block div{ 
+    color: rgb(102, 109, 137);
+    border: 1px solid ;
+    border-radius: 5px;
+   font-size: 12px;
+   padding: 4px 7px;
+    margin-right: 9px;
+   font-weight: 400;
+}
+.portfolio-pictures{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 18px;
+    max-height: 621px;
+    overflow: hidden;
+   
+}
+
+.portfolio-pictures div{
+    flex-basis: 240px;
+    height: 207px;
+  
+}
+.portfolio-pictures img{
+    width: 220px;
+    height: 187px;
+}
+
+.partfolio-stip {
+    height: 6px;
+    background-color: #323746;
+}
+
+.about-wrapper{
+    padding-left: 40px;
+    height: 728px;
+    padding-right: 20px;
+}
+
+.about-article{
+    padding-top: 18px;
+    line-height: 1.667;
+}
+
+.about-portfolio{
+    display: flex;
+    padding-top: 45px;
+    color: rgb(102, 109, 137);
+}
+
+.about-portfolio .about-person{
+    flex: auto;
+    width: 300px
+}
+
+
+.person-name{
+    margin-top: 15px;
+    font-size: 18px;
+    height: 15px;
+    line-height: 0.992;
+    overflow: hidden;
+}
+.person-description{
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 400;
+    height: 42px;
+    width: 300px;
+    line-height: 1.797;
+    overflow: hidden;
+}
+
+.social-media{
+    display: flex; 
+    margin-top: 24px;
+}
+.social-media div, a{
+    width: 33px;
+    height: 32px;
+    margin-right: 7px;
+} 
+.person-facebook{
+    background-image: url(./assets/social-img/facebook.png);
+}
+.person-google{
+    background-image: url(./assets/social-img/google.png);
+}
+
+.person-twitter{
+    background-image: url(./assets/social-img/twitter.png);
+
+}
+
+.person-linkedin{
+    background-image: url(./assets/social-img/linkedin.png);
+}
+  
+.person-facebook ,.person-google ,.person-twitter, .person-linkedin{
+    background-repeat: no-repeat;
+}
+
+.about-stip {
+    height: 6px;
+    background-color: #ffffff;
+}
