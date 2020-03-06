@@ -51,6 +51,7 @@ p {
   font-family: "Lato";
   font-size: 12px;
   color: #f0d8d9;;
+  font-weight: 400;
 }
 
 textarea{
@@ -61,9 +62,9 @@ textarea{
     font-size: 12px;
     font-weight: 300;
     margin: 0;
-    color:#ec7e7e;
+    color:#f2898b;
+    font-weight: 400;
 }
-
 .content-inner {
   display: flex;
   padding-top: 40px;
@@ -143,19 +144,20 @@ footer {
     font-size: 12px;
     padding-top: 30px;
     color: #666d89;
+    font-weight: 400;
 }
 
 
 .media-footer{
     float: right;
-    padding: 20px 0px 0px 0px;
+    padding: 22px 0px 0px 0px;
 }
 
 
 .media-footer li {
     float: right;
-   padding-left: 7px;
-  width: 33px;
+   padding-left: 8px;
+  width: 32px;
   height: 32px;
 }
 .media-footer li a{
