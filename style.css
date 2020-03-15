@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap");
+#kuku {
 
+}
 body {
   font-family: "Lato", sans-serif;
   margin: 0 auto;
@@ -11,6 +13,8 @@ header {
   background-color: rgb(45, 48, 58);
   height: 89px;
   display: flex;
+  padding: 0 40px;
+  justify-content: space-between;
 }
 
 .row {
@@ -30,7 +34,6 @@ nav div {
 
 .top-logo {
   padding-top: 40px;
-  padding-left: 40px;
 }
 
 .top-logo span {
@@ -52,7 +55,6 @@ nav div {
 }
 
 .top-nav {
-  padding-left: 453px;
   padding-top: 45px;
   font-size: 12px;
   font-weight: 700;
@@ -61,16 +63,26 @@ nav div {
 }
 .top-nav li {
   display: inline;
-  padding-left: 2px;
+  padding-left: 14px;
+  letter-spacing: -0.035em;
 }
 
+#navigation-bar .active {
+  color: #e66962;
+}
+
+#navigation-bar a:not(.active):hover {
+  color: #e66962;
+  cursor: pointer;
+}
 .top-nav ul {
   list-style-type: none;
   line-height: 10px;
   margin: 0;
 }
 
-.top-nav a {
+.top-nav a,
+bottom {
   text-decoration: none;
   color: white;
   line-height: 0.527;
@@ -92,41 +104,40 @@ nav div {
 .slider {
   background-color: rgb(240, 108, 100);
   height: 594px;
-  max-width: 100%;
   padding: 0 40px;
   align-items: center;
-  z-index: 3;
+  justify-content: space-between;
 }
 
 .left-pointer {
-  padding-left: 2px;
-  flex-basis: 73px;
 }
 
 .iphone-vertical {
-  z-index: 5;
   background-image: url(./assets/iPhone_vertical.png);
   background-repeat: no-repeat;
+  background-size: 93.7%, contain;
   height: 489px;
-  flex-basis: 322px;
+  max-width: 256px;
+  width: 100%;
 }
 
 .iphone-horizontal {
   background-image: url(./assets/iPhone_horizontal.png);
   background-repeat: no-repeat;
+  background-size: contain;
   height: 247px;
-  flex-basis: 555px;
+  max-width: 484px;
+  width: 100%;
 }
 
 .crop-ver {
-  height: 333px;
-  max-width: 188px;
+  height: 68.4%;
+  max-width: 73.3%;
   overflow: hidden;
-  position: relative;
-  top: 65px;
-  left: 14px;
+  padding: 25% 0px 0% 5.8%;
 }
-
+.help-crop {
+}
 .crop img {
   margin: -41px -156px -40px -30px;
   max-width: 100%;
@@ -151,7 +162,7 @@ nav div {
   background-color: rgb(242, 242, 242);
   max-width: 100%;
   height: 494px;
-  padding: 0 20px 0 41px;
+  padding: 0 40px;
 }
 
 .our-services p,
@@ -160,7 +171,7 @@ nav div {
 }
 
 .our-services p {
-  padding-top: 17px;
+  padding-top: 18px;
   line-height: 1.797;
 }
 .out-text-top {
@@ -183,30 +194,33 @@ nav div {
 .our-services-container {
   display: flex;
   flex-wrap: wrap;
-  height: 246px;
-  padding-top: 5px;
+  justify-content: space-between;
+  margin-top: 44px;
 }
 
-.our-services-container .main-item {
-  flex: 0 1 33.33%;
-}
 .main-item {
-  height: 83px;
+  margin-bottom: 38px;
+  height: 85px;
   display: flex;
-  margin-top: 39px;
+  float: left;
+  flex-basis: 300px;
 }
 
 .circle {
-  flex-basis: 80px;
+  /* flex-basis: 80px; */
+  height: 60px;
+  width: 60px;
 }
 
 .sideitem {
-  flex-basis: 80px;
-  flex-shrink: 0;
+  /* flex-basis: 80px; */
+  /* flex-shrink: 0; */
   display: flex;
   flex-direction: column;
-  flex-basis: 233px;
+  /* flex-basis: 233px; */
   overflow: hidden;
+
+  margin-left: 21px;
 }
 
 .sideitem h4 {
@@ -249,8 +263,7 @@ nav div {
 .portfolio-wrapper {
   background-color: #2d303a;
   height: 863px;
-  /* padding: 0 40px 0 40px; */
-  padding-left: 40px;
+  padding: 0 40px;
 }
 
 .portfolio-head {
@@ -264,19 +277,20 @@ h3 {
   padding-top: 60px;
 }
 .portfolio-text {
-  padding-top: 24px;
+  padding-top: 19px;
 }
 
 .portfolio-wrapper p {
   color: rgb(102, 109, 137);
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   margin: 0;
+  line-height: 30px;
 }
 
 .portfolio-seleciton-block {
   display: flex;
-  padding-top: 16px;
+  padding-top: 11px;
 }
 
 .portfolio-seleciton-block a {
@@ -298,18 +312,17 @@ h3 {
 }
 .portfolio-pictures {
   margin-top: 20px;
-  max-height: 621px;
+  height: 621px;
   overflow: hidden;
 }
 .portfolio-pictures ul {
+  justify-content: space-between;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
 }
 .portfolio-pictures ul li {
   display: inline;
-  flex-basis: 240px;
-
   height: 207px;
 }
 .portfolio-pictures ul li img {
@@ -323,9 +336,8 @@ h3 {
 }
 
 .about-wrapper {
-  padding-left: 40px;
+  padding: 0 40px;
   height: 728px;
-  padding-right: 20px;
   background-color: #f2f2f2;
 }
 
@@ -342,41 +354,52 @@ h3 {
 
 .about-portfolio {
   display: flex;
-  padding-top: 45px;
+  justify-content: space-between;
+  padding-top: 46px;
+}
+
+.about-person {
+  max-width: 300px;
+  margin-left: 10px;
+}
+
+.about-person:first-child {
+  margin: 0px;
+}
+.about-person img {
+  width: 100%;
+}
+
+.about-person h4 {
   color: rgb(102, 109, 137);
-}
-
-.about-portfolio .about-person {
-  flex: auto;
-  width: 300px;
-}
-
-.person-name {
-  margin-top: 15px;
+  margin: 15px 0px 0px 0px;
   font-size: 18px;
   height: 15px;
   line-height: 0.992;
   overflow: hidden;
 }
-.person-description {
+
+.about-person p {
+  color: rgb(102, 109, 137);
   margin-top: 12px;
   font-size: 12px;
   font-weight: 400;
   height: 42px;
-  width: 300px;
   line-height: 1.797;
   overflow: hidden;
+  text-align: justify;
 }
 
 .social-media {
   display: flex;
   margin-top: 24px;
 }
-.social-media div,
-a {
-  width: 33px;
-  height: 32px;
-  margin-right: 7px;
+.social-media a {
+  width: 100%;
+  max-width: 32px;
+  height: 33px;
+  margin-right: 8px;
+  background-size: 100%, 100%, contain;
 }
 .person-facebook {
   background-image: url(./assets/social-img/facebook.png);
@@ -432,19 +455,26 @@ p {
 }
 
 .quote-wrapper p {
-  padding-top: 16px;
-  line-height: 1.797;
+  padding-top: 19px;
+  line-height: 30px;
 }
 
 .form-quote {
   display: flex;
   flex-direction: column;
-  max-width: 622px;
+  max-width: 619px;
+}
+
+.form-quote input[type] {
+  padding: 0px;
+  /* padding-left: 16px; */
+}
+.form-quote input {
+  height: 38px;
 }
 .form-quote input,
 textarea {
-  padding: 14px;
-  margin-bottom: 13px;
+  margin-bottom: 16px;
   border: none;
   border-radius: 5px;
   background-color: rgb(214, 86, 79);
@@ -455,10 +485,12 @@ textarea {
 }
 
 textarea {
-  height: 176px;
-  resize:none
+  height: 202px;
+  resize: none;
+  padding: 0;
 }
 ::placeholder {
+  padding: 9px 10px 10px 15px;
   color: #f0d8d9;
   font-size: 12px;
   font-weight: 300;
@@ -468,13 +500,13 @@ textarea {
 }
 .content-inner {
   display: flex;
-  padding-top: 40px;
+  padding-top: 44px;
 }
 
 .content-right {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+  flex-basis: 300px;
   padding-left: 20px;
 }
 
@@ -482,7 +514,6 @@ textarea {
   margin: 0;
   font-size: 18px;
   color: rgb(240, 216, 217);
-  line-height: 1.3;
   font-weight: 600;
 }
 
@@ -560,7 +591,7 @@ footer {
 .media-footer li a {
   display: block;
   height: 100%;
-  weight: 100%;
+
   padding: 10px;
 }
 .person-facebook {
@@ -576,4 +607,158 @@ footer {
 
 .person-linkedin {
   background-image: url(./assets/social-img/linkedin.png);
+}
+
+@media screen and (max-width: 768px) and (min-width: 376px) {
+  .slider {
+    height: 447px;
+    padding: 0 30px;
+  }
+  .iphone-vertical {
+    background-size: contain;
+    height: 381px;
+    max-width: 180px;
+  }
+
+  .iphone-horizontal {
+    height: 189px;
+    max-width: 363px;
+    width: 100%;
+  }
+
+  .crop-ver {
+    height: 65.6%;
+    max-width: 78.5%;
+    margin: 49px 0px 0px 10px;
+    padding: 0;
+  }
+
+  .crop-hor {
+    height: 142px;
+    max-width: 250px;
+    top: 10px;
+    left: 45px;
+  }
+  .our-services {
+    height: 674px;
+  }
+  .our-services h3 {
+    padding-top: 39px;
+  }
+  .our-services-container {
+    justify-content: space-evenly;
+    margin-top: 28pxl;
+  }
+
+  .portfolio-wrapper {
+    height: 1096px;
+  }
+  .portfolio-text {
+    padding-top: 14px;
+  }
+  .portfolio-pictures {
+    margin-top: 26px;
+    height: 810px;
+  }
+  .portfolio-pictures ul li img {
+    width: 216px;
+  }
+
+  .about-wrapper {
+    height: 663px;
+  }
+  .about-wrapper h3 {
+    padding-top: 40px;
+  }
+  .about-person {
+    max-width: 218px;
+  }
+  .about-person p {
+    height: 72px;
+  }
+
+  .social-media {
+    margin-top: 14px;
+  }
+  .quote-wrapper h3 {
+    padding-top: 53px;
+  }
+  .content-inner {
+    padding-top: 19px;
+  }
+  .content-right ul li {
+    background-repeat: no-repeat;
+    padding-left: 22px;
+    height: 21px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .slider {
+    height: 218px;
+    padding: 0 10px;
+  }
+  .iphone-vertical {
+    background-size: contain;
+    height: 168px;
+    max-width: 79px;
+  }
+
+  .iphone-horizontal {
+    height: 79px;
+    max-width: 168px;
+    width: 100%;
+  }
+
+  .crop-ver {
+    height: 65.4%;
+    max-width: 79.3%;
+    margin: 21px 0px 0px 4px;
+    padding: 0;
+  }
+
+  .crop-hor {
+    height: 61px;
+    max-width: 109px;
+    top: 5px;
+    left: 20px;
+  }
+  .our-services {
+    height: 1034px;
+  }
+
+  .portfolio-wrapper {
+    height: 844px;
+    padding: 0 30px;
+  }
+  .portfolio-pictures {
+    height: 565px;
+  }
+  .portfolio-pictures ul li {
+    height: 142px;
+  }
+  .portfolio-pictures ul li img {
+    width: 151px;
+    height: 128px;
+  }
+  .about-wrapper {
+    height: 1754px;
+    padding: 0 30px;
+  }
+  .about-wrapper h3 {
+    padding-top: 33px;
+  }
+
+  .about-portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 46px;
+  }
+
+  .about-person {
+    width: 100%;
+    margin: 0;
+    margin-top: 34px;
+  }
 }

@@ -15,6 +15,7 @@
   </head>
 
   <body>
+    
     <header>
       <div class="top-logo">
         <a href="#home"
@@ -23,7 +24,7 @@
       </div>
       <nav class="top-bar row">
         <div class="top-nav">
-          <ul>
+          <ul id="navigation-bar">
             <li><a href="#home">HOME</a></li>
             <li>
               <a href="#services"><span>·</span>SERVICES</a>
@@ -42,18 +43,20 @@
       </nav>
     </header>
     <div class="top-stip"></div>
-    <div class="slider row">
+    <div class="slider row " >
       <div class="left-pointer">
         <input type="image" src="./assets/left_pointer.png" alt="👈" />
       </div>
-      <div class="iphone-vertical ">
+      <div class="iphone-vertical " id="ver">
         <div class="crop-ver">
+          <div class="help-crop">
           <img src="./assets/vert_fon.png" alt="" />
         </div>
+        </div>
       </div>
-      <div class="iphone-horizontal">
-        <div class="crop-hor">
-          <img src="./assets/hor-fon.png" alt="" />
+      <div class="iphone-horizontal" id = "hor">
+        <div  class="crop-hor off-horizontal-iphnone">
+         <img id="hor-phone" src="./assets/hor-fon.png" alt="" />
         </div>
       </div>
       <div class="right-pointer">
@@ -190,11 +193,11 @@
           <div class="person-pictur">
             <img src="./assets/person1.png" alt="" />
           </div>
-          <div class="person-name">Adam Jensen</div>
-          <div class="person-description">
+          <h4>Adam Jensen</h4>
+          <p>
             Quisque luctus, quam eget molestie commodo, lacus purus cursus
             purus, nec rutrum tellus dolor id lorem.
-          </div>
+          </p>
           <div class="social-media">
             <a class="person-facebook" href=""></a>
             <a class="person-google" href=""></a>
@@ -206,11 +209,11 @@
           <div class="person-pictur">
             <img src="./assets/person2.png" alt="" />
           </div>
-          <div class="person-name">Desmond Miles</div>
-          <div class="person-description">
+          <h4>Desmond Miles</h4>
+          <p>
             Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
             laoreet, viverra lacus ut, ultrices velit.
-          </div>
+          </p>
           <div class="social-media">
             <a class="person-facebook" href=""></a>
             <a class="person-google" href=""></a>
@@ -222,11 +225,11 @@
           <div class="person-pictur">
             <img src="./assets/person3.png" alt="" />
           </div>
-          <div class="person-name">Scolara Visari</div>
-          <div class="person-description">
+          <h4>Scolara Visari</h4>
+          <p>
             Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
             et consequat felis. Quisque condimentum.
-          </div>
+          </p>
           <div class="social-media">
             <a class="person-facebook" href=""></a>
             <a class="person-google" href=""></a>
@@ -255,6 +258,7 @@
               name="comment"
               cols="40"
               rows="13"
+              maxlength="600"
               placeholder="Describe your project in detail..."
             ></textarea>
 
@@ -297,5 +301,6 @@
         </ul>
       </div>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>
