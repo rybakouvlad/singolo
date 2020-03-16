@@ -121,6 +121,42 @@ bottom {
   width: 100%;
 }
 
+.iphone-vertical-second {
+  height: 513px;
+  max-width: 254px;
+  width: 100%;
+  background-size: 100%;
+  position: relative;
+} 
+.iphone-vertical-second img{
+  position: absolute;
+ 
+    top: 68px;
+    left: 14px;
+}
+.second-slider{
+
+  background-color: #648BF0;
+  display:none;
+}
+.iphone-vertical-small{
+  background-image: url(./assets/iPhone_vertical.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 314px;
+  max-width: 156px;
+  width: 100%;
+  opacity: 0.5;
+  position: relative;
+  justify-content: center;
+}
+.iphone-vertical-small img{
+position: absolute;
+height: 217px;
+width: 122px;
+top: 42px;
+    left: 9px;
+}
 .iphone-horizontal {
   background-image: url(./assets/iPhone_horizontal.png);
   background-repeat: no-repeat;
@@ -129,6 +165,9 @@ bottom {
   max-width: 484px;
   width: 100%;
 }
+
+
+
 
 .crop-ver {
   height: 68.4%;

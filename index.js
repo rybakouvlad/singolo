@@ -1,44 +1,37 @@
-const MENU = document.getElementById('navigation-bar');
- 
+const MENU = document.getElementById("navigation-bar");
 
-MENU.addEventListener('click',(event) => {
-    MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
-    event.target.classList.add('active');
-    
- })
+MENU.addEventListener("click", event => {
+  MENU.querySelectorAll("a").forEach(el => el.classList.remove("active"));
+  if (event.target.tagName != "A") return;
+  event.target.classList.add("active");
+});
 
- hor.onclick = function(event) {
-    if (event.target.tagName != "IMG") return;
-    if (/assets\/black.jpg/.test(event.target.src)) {
-        event.target.src = './assets/hor-fon.png';
-    } else {
-        
-        event.target.src = './assets/black.jpg';
-    }
- } 
 
- ver.onclick = function(event) {
-    if (event.target.tagName != "IMG") return;
-    if (/assets\/black.jpg/.test(event.target.src)) {
-         event.target.src = './assets/vert_fon.png';
-    } else {
-        event.target.src = './assets/black.jpg';
-        
-    }
- } 
-// PHONE.addEventListener('click',(event) => {
-//     if( event.target.style.display === 'none'){
-//         event.target.style.display ='block';
-//        }
-//        console.log("kuku");
-//     event.target.style.display = 'none';
- 
-//     PHONE.remove();
-// })
+phones.onclick = function(event) {
+  if (event.target.tagName != "IMG") return;
+  console.log(event.target.style.opacity );
+  
+  if (event.target.style.opacity === "0") {
+    event.target.style.opacity = "1" ;
+  } else {
+    event.target.style.opacity = "0" ;
+  }
+};
 
-//  const horOn = document.getElementById('hor-on')
+const PHONES_VERT = document.getElementById("firstSlider");
 
-//  horOn.addEventListener('click', () => {
-//     // PHONE.style.display = 'block'
-//     horOn.style.backgroundColor ='black';
-//  })
+
+PHONES_VERT.addEventListener('click',() => {
+  if (event.target.tagName != "INPUT") return;
+  document.getElementById('firstSlider').style.display = 'none';
+  document.getElementById('secondSlider').style.display = 'flex';
+})
+
+const PHONES_HOR = document.getElementById("secondSlider");
+
+
+PHONES_HOR.addEventListener('click',() => {
+  if (event.target.tagName != "INPUT") return;
+  document.getElementById('firstSlider').style.display = 'flex';
+  document.getElementById('secondSlider').style.display = 'none';
+})
