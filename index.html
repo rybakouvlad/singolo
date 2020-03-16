@@ -14,7 +14,7 @@
 
 <body>
 
-  <header>
+  <header id="home">
     <div class="top-logo">
       <a href="#home">
         <h1>SINGOLO<span>*</span></h1>
@@ -82,7 +82,7 @@
     </div>
   </div>
   <div class="out-services-stip"></div>
-  <div class="our-services">
+  <div class="our-services" id="services">
     <h3>Our Services</h3>
     <p>
       Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
@@ -164,7 +164,7 @@
   </div>
   </div>
   <div class="end-services-stip"></div>
-  <div class="portfolio-wrapper">
+  <div class="portfolio-wrapper" id="portfolio">
     <div class="portfolio-head">
       <h3>Portfolio</h3>
     </div>
@@ -174,31 +174,37 @@
         lacinia odio sem nec elit.
       </p>
     </div>
-    <div class="portfolio-seleciton-block">
-      <a href="">All</a>
-      <a href="">Web Design</a>
-      <a href="">Graphics Design</a>
-      <a href="">Artwork</a>
+    <div class="portfolio-seleciton-block" >
+      <ul class="strategies_tags tags">
+        <li class = "tag tag_bordered">All</li>
+        <li class = "tag tag__web tag_bordered">Web Design</li>
+        <li class = "tag tag__design tag_bordered">Graphics Design</li>
+        <li class = "tag tag__art tag_bordered">Artwork</li>
+      </ul>
+      <!-- <a id = "tag tag__all" href="">All</a>
+      <a id = "tag tag__web"href="">Web Design</a>
+      <a id = "tag tag__design"href="">Graphics Design</a>
+      <a id = "tag tag__art"href="">Artwork</a> -->
     </div>
     <div class="portfolio-pictures">
       <ul>
-        <li><img src="./assets/box-portfolio/img1.png" alt="" /></li>
-        <li><img src="./assets/box-portfolio/img2.png" alt="" /></li>
-        <li><img src="./assets/box-portfolio/img3.png" alt="" /></li>
-        <li><img src="./assets/box-portfolio/img4.png" alt="" /></li>
-        <li><img src="./assets/box-portfolio/img5.png" alt="" /></li>
-        <li><img src="./assets/box-portfolio/img6.png" alt="" /></li>
-        <li><img src="./assets/box-portfolio/img7.png" alt="" /></li>
-        <li><img src="./assets/box-portfolio/img8.png" alt="" /></li>
-        <li><img src="./assets/box-portfolio/img9.png" alt="" /></li>
-        <li><img src="./assets/box-portfolio/img10.png" alt="" /></li>
-        <li><img src="./assets/box-portfolio/img11.png" alt="" /></li>
-        <li><img src="./assets/box-portfolio/img12.png" alt="" /></li>
+        <li><img class ="tag__art" src="./assets/box-portfolio/img1.png" alt="" /></li>
+        <li><img class ="tag__web" src="./assets/box-portfolio/img2.png" alt="" /></li>
+        <li><img class="tag__design" src="./assets/box-portfolio/img3.png" alt="" /></li>
+        <li><img class="tag__art" src="./assets/box-portfolio/img4.png" alt="" /></li>
+        <li><img class="tag__design" src="./assets/box-portfolio/img5.png" alt="" /></li>
+        <li><img class ="tag__web" src="./assets/box-portfolio/img6.png" alt="" /></li>
+        <li><img class="tag__design" src="./assets/box-portfolio/img7.png" alt="" /></li>
+        <li><img class ="tag__web" src="./assets/box-portfolio/img8.png" alt="" /></li>
+        <li><img class="tag__art" src="./assets/box-portfolio/img9.png" alt="" /></li>
+        <li><img class ="tag__web" src="./assets/box-portfolio/img10.png" alt="" /></li>
+        <li><img class="tag__design" src="./assets/box-portfolio/img11.png" alt="" /></li>
+        <li><img  class="tag__art" src="./assets/box-portfolio/img12.png" alt="" /></li>
       </ul>
     </div>
   </div>
   <div class="partfolio-stip"></div>
-  <div class="about-wrapper">
+  <div class="about-wrapper" id="about">
     <div class="">
       <h3>About Us</h3>
     </div>
@@ -262,7 +268,7 @@
     </div>
   </div>
   <div class="about-stip"></div>
-  <div class="quote-wrapper">
+  <div class="quote-wrapper" id="contact">
     <h3>Get a Quote</h3>
     <p>
       Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
