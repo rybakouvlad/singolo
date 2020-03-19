@@ -174,12 +174,12 @@
         lacinia odio sem nec elit.
       </p>
     </div>
-    <div class="portfolio-seleciton-block" >
+    <div class="portfolio-seleciton-block">
       <ul class="strategies_tags tags">
-        <li class = "tag tag_bordered">All</li>
-        <li class = "tag tag__web tag_bordered">Web Design</li>
-        <li class = "tag tag__design tag_bordered">Graphics Design</li>
-        <li class = "tag tag__art tag_bordered">Artwork</li>
+        <li class="tag tag_bordered">All</li>
+        <li class="tag tag__web tag_bordered">Web Design</li>
+        <li class="tag tag__design tag_bordered">Graphics Design</li>
+        <li class="tag tag__art tag_bordered">Artwork</li>
       </ul>
       <!-- <a id = "tag tag__all" href="">All</a>
       <a id = "tag tag__web"href="">Web Design</a>
@@ -188,18 +188,18 @@
     </div>
     <div class="portfolio-pictures">
       <ul>
-        <li><img class ="tag__art" src="./assets/box-portfolio/img1.png" alt="" /></li>
-        <li><img class ="tag__web" src="./assets/box-portfolio/img2.png" alt="" /></li>
+        <li><img class="tag__art" src="./assets/box-portfolio/img1.png" alt="" /></li>
+        <li><img class="tag__web" src="./assets/box-portfolio/img2.png" alt="" /></li>
         <li><img class="tag__design" src="./assets/box-portfolio/img3.png" alt="" /></li>
         <li><img class="tag__art" src="./assets/box-portfolio/img4.png" alt="" /></li>
         <li><img class="tag__design" src="./assets/box-portfolio/img5.png" alt="" /></li>
-        <li><img class ="tag__web" src="./assets/box-portfolio/img6.png" alt="" /></li>
+        <li><img class="tag__web" src="./assets/box-portfolio/img6.png" alt="" /></li>
         <li><img class="tag__design" src="./assets/box-portfolio/img7.png" alt="" /></li>
-        <li><img class ="tag__web" src="./assets/box-portfolio/img8.png" alt="" /></li>
+        <li><img class="tag__web" src="./assets/box-portfolio/img8.png" alt="" /></li>
         <li><img class="tag__art" src="./assets/box-portfolio/img9.png" alt="" /></li>
-        <li><img class ="tag__web" src="./assets/box-portfolio/img10.png" alt="" /></li>
+        <li><img class="tag__web" src="./assets/box-portfolio/img10.png" alt="" /></li>
         <li><img class="tag__design" src="./assets/box-portfolio/img11.png" alt="" /></li>
-        <li><img  class="tag__art" src="./assets/box-portfolio/img12.png" alt="" /></li>
+        <li><img class="tag__art" src="./assets/box-portfolio/img12.png" alt="" /></li>
       </ul>
     </div>
   </div>
@@ -278,17 +278,30 @@
     </p>
     <div class="content-inner">
       <div class="content-left">
-        <form class="form-quote">
-          <input type="text" placeholder="Name (Required)" />
-          <input type="email" placeholder="Email (Required)" />
-          <input type="text" placeholder="Subject" />
-          <textarea name="comment" cols="40" rows="13" maxlength="600"
-            placeholder="Describe your project in detail..."></textarea>
+        <form class="form-quote" id="form-input" action="#" onsubmit="return false;">
 
-          <input type="submit" value="Submit" />
+          <input type="text" name="name" placeholder="Name (Required)" required />
+ 
+          <input type="email" name="email" placeholder="Email (Required)" />
+          <input type="text" name="subject" placeholder="Subject" />
+          <textarea id="comment" name="comment" value="" cols="40" rows="13" maxlength="600"
+            placeholder="Describe your project in detail..."></textarea>
+          <input id="submitBtn" type="button" value="Submit" />
         </form>
       </div>
+      <div class="modal-overlay" id="modal__letter">
+        <div class="modal" id="modal" aria-hidden="true" aria-labelledby="modalTitle"
+          aria-describedby="modalDescription" role="dialog">
+          <div id="status__letter">The letter was sent</div>
+          <div id="subject__letter"></div>
+          <div id="description__letter"></div>
+        
+          <button class="close-button" id="close__modal" title="Закрыть модальное окно">OK</button>
+          
+           
+        </div>
 
+      </div>
       <div class="content-right">
         <h4>Contact Information</h4>
         <p>

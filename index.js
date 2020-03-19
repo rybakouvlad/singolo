@@ -87,3 +87,60 @@ const showAllStrategy = () => {
     str.style.display = "block";
   });
 };
+
+const SUBMIT_BUTTON = document.getElementById("form-input");
+
+SUBMIT_BUTTON.addEventListener("click", () => {
+  if (event.target.type === "button") {
+   //document.querySelector('.form-quote').submit();
+    if(checkValueForm() != false){
+      addValueForm(SUBMIT_BUTTON);
+    }
+    
+  }
+});
+
+const checkValueForm = () => {
+  for (let i = 0; i < SUBMIT_BUTTON.length; i++) {
+    if(SUBMIT_BUTTON[i].name === "name"){
+      if(SUBMIT_BUTTON[i].value.length === 0){
+      
+        
+        document.querySelector("input[name=name]").focus();
+        document.querySelector("input[name=name]").placeholder = "ENTER YOUR NAME PLEASE";
+        document.querySelector("input[name=name]").classList.add('check-change__color');
+        return false;
+      }
+    }
+  }
+}
+
+const addValueForm = () => {
+  let subject__letter = document.getElementById("subject__letter");
+  let description__letter = document.getElementById("description__letter");
+  for (let i = 0; i < SUBMIT_BUTTON.length; i++) {
+    if (SUBMIT_BUTTON[i].name === "comment") {
+      if (SUBMIT_BUTTON[i].value.length === 0) {
+        description__letter.innerHTML = "No description";
+      } else {
+        description__letter.innerHTML = "Description: " + SUBMIT_BUTTON[i].value;
+      }
+    }
+    if (SUBMIT_BUTTON[i].name === "subject") {
+      if (SUBMIT_BUTTON[i].value.length === 0) {
+        subject__letter.innerHTML = "No subject";
+      } else {
+        subject__letter.innerHTML = "Subject: " + SUBMIT_BUTTON[i].value;
+      }
+    }
+  }
+
+  document.querySelector("#modal__letter").style.display = "block";
+};
+
+document.querySelector('#close__modal').addEventListener("click", () => {
+  document.querySelector('.form-quote').submit();
+  document.querySelector("input[name=name]").classList.remote('check-change__color');
+  SUBMIT_BUTTON.reset();
+  document.querySelector("#modal__letter").style.display = "none";
+})
