@@ -41,46 +41,49 @@
     </nav>
   </header>
   <div class="top-stip"></div>
-  <div id="phones">
-    <div class="slider row first-slider" id="firstSlider">
-
-      <div class="left-pointer">
-        <input type="image" src="./assets/left_pointer.png" alt="👈" id="fistBtn" />
-      </div>
-      <div class="iphone-vertical ">
-        <div class="crop-ver">
-          <img src="./assets/vert_fon.png" alt="" />
-        </div>
-      </div>
-      <div class="iphone-horizontal" id="ver">
-        <div class="crop-hor off-horizontal-iphnone">
-          <img src="./assets/hor-fon.png" alt="" />
-        </div>
-      </div>
-      <div class="right-pointer">
-        <input type="image" src="./assets/right_pointer.png" alt="right" id="fistBtn" />
-      </div>
-
-
+  <div class="phones-wrapper">
+  <div class="slider" id="phones" >
+    <div class="left-pointer">
+      <input class="slider__control slider__control_left" id="btn" type="image" src="./assets/left_pointer.png" alt="👈" />
     </div>
-    <div class="second-slider slider row " id="secondSlider">
-      <div class="left-pointer">
-        <input id="btn" type="image" src="./assets/left_pointer.png" alt="👈" />
+    <div class="slider__wrapper">
+      <div class="slider__item row first-slider">
+        
+        <div class="iphone-vertical ">
+          <div class="crop-ver">
+            <img src="./assets/vert_fon.png" alt="" />
+          </div>
+        </div>
+        <div class="iphone-horizontal" id="ver">
+          <div class="crop-hor off-horizontal-iphnone">
+            <img src="./assets/hor-fon.png" alt="" />
+          </div>
+        </div>
+        
       </div>
-      <div class="iphone-vertical-small left-phone">
-        <img src="./assets/small_phone_display.png" alt="" />
+      <div class="slider__item row second-slider">
+
+   
+          <div class="iphone-vertical-small left-phone">
+            <img src="./assets/small_phone_display.png" alt="" />
+          </div>
+          <div class="iphone-vertical iphone-vertical-second ">
+            <img src="./assets/phone-vertical-display.png" alt="" />
+          </div>
+          <div class="iphone-vertical-small">
+            <img src="./assets/small_phone_display.png" alt="" />
+          </div>
+          
+        
       </div>
-      <div class="iphone-vertical iphone-vertical-second ">
-        <img src="./assets/phone-vertical-display.png" alt="" />
-      </div>
-      <div class="iphone-vertical-small">
-        <img src="./assets/small_phone_display.png" alt="" />
-      </div>
-      <div class="right-pointer">
-        <input id="btn" type="image" src="./assets/right_pointer.png" alt="right" />
-      </div>
+      
     </div>
+    <div class="right-pointer">
+      <input class="slider__control slider__control_right slider__control_show" id="btn" type="image" src="./assets/right_pointer.png" alt="right" />
+    </div>
+   
   </div>
+</div>
   <div class="out-services-stip"></div>
   <div class="our-services" id="services">
     <h3>Our Services</h3>
@@ -90,7 +93,7 @@
       odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor
       mauris condimentum nibh.
     </p>
-    <!-- <div class="large-text-out">Our Services</div> -->
+   
 
     <div class="our-services-container">
       <div class="main-item">
@@ -181,10 +184,6 @@
         <li class="tag tag__design tag_bordered">Graphics Design</li>
         <li class="tag tag__art tag_bordered">Artwork</li>
       </ul>
-      <!-- <a id = "tag tag__all" href="">All</a>
-      <a id = "tag tag__web"href="">Web Design</a>
-      <a id = "tag tag__design"href="">Graphics Design</a>
-      <a id = "tag tag__art"href="">Artwork</a> -->
     </div>
     <div class="portfolio-pictures">
       <ul>

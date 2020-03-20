@@ -8,8 +8,6 @@ MENU.addEventListener("click", event => {
 
 phones.onclick = function(event) {
   if (event.target.tagName != "IMG") return;
-  console.log(event.target.style.opacity);
-
   if (event.target.style.opacity === "0") {
     event.target.style.opacity = "1";
   } else {
@@ -17,21 +15,21 @@ phones.onclick = function(event) {
   }
 };
 
-const PHONES_VERT = document.getElementById("firstSlider");
+// const PHONES_VERT = document.getElementById("firstSlider");
 
-PHONES_VERT.addEventListener("click", () => {
-  if (event.target.tagName != "INPUT") return;
-  document.getElementById("firstSlider").style.display = "none";
-  document.getElementById("secondSlider").style.display = "flex";
-});
+// PHONES_VERT.addEventListener("click", () => {
+//   if (event.target.tagName != "INPUT") return;
+//   document.getElementById("firstSlider").style.display = "none";
+//   document.getElementById("secondSlider").style.display = "flex";
+// });
 
-const PHONES_HOR = document.getElementById("secondSlider");
+// const PHONES_HOR = document.getElementById("secondSlider");
 
-PHONES_HOR.addEventListener("click", () => {
-  if (event.target.tagName != "INPUT") return;
-  document.getElementById("firstSlider").style.display = "flex";
-  document.getElementById("secondSlider").style.display = "none";
-});
+// PHONES_HOR.addEventListener("click", () => {
+//   if (event.target.tagName != "INPUT") return;
+//   document.getElementById("firstSlider").style.display = "flex";
+//   document.getElementById("secondSlider").style.display = "none";
+// });
 
 window.onload = function() {
   addTagsClickHandler();
@@ -82,17 +80,29 @@ const filterStrategyBySelectedTag = selectedTag => {
 
 const showAllStrategy = () => {
   let strategies = document.querySelectorAll("ul img");
-
+  let j = 0;
+  let cls;
+  let temp;
   strategies.forEach(str => {
     str.style.display = "block";
   });
+  for(let i = strategies.length - 1; i > 0; i--){
+    j = Math.floor(Math.random()*(i + 1));
+
+    temp = strategies[j].src;
+    cls = strategies[j].className;
+    strategies[j].src = strategies[i].src;
+    strategies[j].className = strategies[i].className;
+    strategies[i].src =  temp;
+    strategies[i].className = cls; 
+	}
+  
 };
 
 const SUBMIT_BUTTON = document.getElementById("form-input");
 
 SUBMIT_BUTTON.addEventListener("click", () => {
   if (event.target.type === "button") {
-   //document.querySelector('.form-quote').submit();
     if(checkValueForm() != false){
       addValueForm(SUBMIT_BUTTON);
     }
@@ -144,3 +154,105 @@ document.querySelector('#close__modal').addEventListener("click", () => {
   SUBMIT_BUTTON.reset();
   document.querySelector("#modal__letter").style.display = "none";
 })
+
+'use strict';
+    var multiItemSlider = (function () {
+      return function (selector, config) {
+        var
+          _mainElement = document.querySelector(selector), 
+          _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), 
+          _sliderItems = _mainElement.querySelectorAll('.slider__item'), 
+          _sliderControls = _mainElement.querySelectorAll('.slider__control'), 
+
+          _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), 
+          _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), 
+          _positionLeftItem = 0, 
+          _transform = 0, 
+          _step = _itemWidth / _wrapperWidth * 100, 
+          _items = [];
+        _sliderItems.forEach(function (item, index) {
+          _items.push({ item: item, position: index, transform: 0 });
+        });
+
+        var position = {
+          getItemMin: function () {
+            var indexItem = 0;
+            _items.forEach(function (item, index) {
+              if (item.position < _items[indexItem].position) {
+                indexItem = index;
+              }
+            });
+            return indexItem;
+          },
+          getItemMax: function () {
+            var indexItem = 0;
+            _items.forEach(function (item, index) {
+              if (item.position > _items[indexItem].position) {
+                indexItem = index;
+              }
+            });
+            return indexItem;
+          },
+          getMin: function () {
+            return _items[position.getItemMin()].position;
+          },
+          getMax: function () {
+            return _items[position.getItemMax()].position;
+          }
+        }
+
+        var _transformItem = function (direction) {
+          var nextItem;
+          if (direction === 'right') {
+            _positionLeftItem++;
+            if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) > position.getMax()) {
+              nextItem = position.getItemMin();
+              _items[nextItem].position = position.getMax() + 1;
+              _items[nextItem].transform += _items.length * 100;
+              _items[nextItem].item.style.transform = 'translateX(' + _items[nextItem].transform + '%)';
+            }
+            _transform -= _step;
+          }
+          if (direction === 'left') {
+            _positionLeftItem--;
+            if (_positionLeftItem < position.getMin()) {
+              nextItem = position.getItemMax();
+              _items[nextItem].position = position.getMin() - 1;
+              _items[nextItem].transform -= _items.length * 100;
+              _items[nextItem].item.style.transform = 'translateX(' + _items[nextItem].transform + '%)';
+            }
+            _transform += _step;
+          }
+          _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+        }
+
+        var _controlClick = function (e) {
+          if (e.target.classList.contains('slider__control')) {
+            e.preventDefault();
+            var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
+            _transformItem(direction);
+          }
+        };
+
+        var _setUpListeners = function () {
+        
+          _sliderControls.forEach(function (item) {
+            item.addEventListener('click', _controlClick);
+          });
+        }
+
+        _setUpListeners();
+
+        return {
+          right: function () { 
+            _transformItem('right');
+          },
+          left: function () { 
+            _transformItem('left');
+          }
+        }
+
+      }
+    }());
+
+    var slider = multiItemSlider('.slider')
