@@ -15,21 +15,6 @@ phones.onclick = function(event) {
   }
 };
 
-// const PHONES_VERT = document.getElementById("firstSlider");
-
-// PHONES_VERT.addEventListener("click", () => {
-//   if (event.target.tagName != "INPUT") return;
-//   document.getElementById("firstSlider").style.display = "none";
-//   document.getElementById("secondSlider").style.display = "flex";
-// });
-
-// const PHONES_HOR = document.getElementById("secondSlider");
-
-// PHONES_HOR.addEventListener("click", () => {
-//   if (event.target.tagName != "INPUT") return;
-//   document.getElementById("firstSlider").style.display = "flex";
-//   document.getElementById("secondSlider").style.display = "none";
-// });
 
 window.onload = function() {
   addTagsClickHandler();
