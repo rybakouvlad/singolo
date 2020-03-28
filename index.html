@@ -15,6 +15,46 @@
 <body>
 
   <header id="home">
+    <nav class="navigation-mobile">
+
+      <a class="navigation-touch" href="#mobile__nav">
+        <img src="./assets/Burger-menu-icon.png">
+      </a>
+      <div class="mobile-nav" id="mobile__nav">
+        <div class="mobile-size-bar">
+        <div class="row">
+          <a class="navigation-touch" href="#home">
+            <img src="./assets/Burger-menu-icon-off.png">
+          </a>
+
+          <div class="top-logo top-logo-mobile">
+            <a href="#home" >
+              <h1>SINGOLO<span>*</span></h1>
+            </a>
+          </div>
+        </div>
+        
+        <ul id="navigation-bar">
+          <li><a href="#home">HOME</a></li>
+          <li>
+            <a href="#services">SERVICES</a>
+          </li>
+          <li>
+            <a href="#portfolio">PORTFOLIO</a>
+          </li>
+          <li>
+            <a href="#about">ABOUT</a>
+          </li>
+          <li>
+            <a href="#contact">CONTACT</a>
+          </li>
+        </ul>
+        </div>
+        <a href="#home" class="nav-mobile-close"></a>
+      </div>
+
+
+    </nav>
     <div class="top-logo">
       <a href="#home">
         <h1>SINGOLO<span>*</span></h1>
@@ -42,28 +82,29 @@
   </header>
   <div class="top-stip"></div>
   <div class="phones-wrapper">
-  <div class="slider" id="phones" >
-    <div class="left-pointer">
-      <input class="slider__control slider__control_left" id="btn" type="image" src="./assets/left_pointer.png" alt="👈" />
-    </div>
-    <div class="slider__wrapper">
-      <div class="slider__item row first-slider">
-        
-        <div class="iphone-vertical ">
-          <div class="crop-ver">
-            <img src="./assets/vert_fon.png" alt="" />
-          </div>
-        </div>
-        <div class="iphone-horizontal" id="ver">
-          <div class="crop-hor off-horizontal-iphnone">
-            <img src="./assets/hor-fon.png" alt="" />
-          </div>
-        </div>
-        
+    <div class="slider" id="phones">
+      <div class="left-pointer">
+        <input class="slider__control slider__control_left" id="btn" type="image" src="./assets/left_pointer.png"
+          alt="👈" />
       </div>
-      <div class="slider__item row second-slider">
+      <div class="slider__wrapper">
+        <div class="slider__item row first-slider">
 
-   
+          <div class="iphone-vertical ">
+            <div class="crop-ver">
+              <img src="./assets/vert_fon.png" alt="" />
+            </div>
+          </div>
+          <div class="iphone-horizontal" id="ver">
+            <div class="crop-hor off-horizontal-iphnone">
+              <img src="./assets/hor-fon.png" alt="" />
+            </div>
+          </div>
+
+        </div>
+        <div class="slider__item row second-slider">
+
+
           <div class="iphone-vertical-small left-phone">
             <img src="./assets/small_phone_display.png" alt="" />
           </div>
@@ -73,17 +114,18 @@
           <div class="iphone-vertical-small">
             <img src="./assets/small_phone_display.png" alt="" />
           </div>
-          
-        
+
+
+        </div>
+
       </div>
-      
+      <div class="right-pointer">
+        <input class="slider__control slider__control_right slider__control_show" id="btn" type="image"
+          src="./assets/right_pointer.png" alt="right" />
+      </div>
+
     </div>
-    <div class="right-pointer">
-      <input class="slider__control slider__control_right slider__control_show" id="btn" type="image" src="./assets/right_pointer.png" alt="right" />
-    </div>
-   
   </div>
-</div>
   <div class="out-services-stip"></div>
   <div class="our-services" id="services">
     <h3>Our Services</h3>
@@ -93,7 +135,7 @@
       odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor
       mauris condimentum nibh.
     </p>
-   
+
 
     <div class="our-services-container">
       <div class="main-item">
@@ -280,7 +322,7 @@
         <form class="form-quote" id="form-input" action="#" onsubmit="return false;">
 
           <input type="text" name="name" placeholder="Name (Required)" required />
- 
+
           <input type="email" name="email" placeholder="Email (Required)" />
           <input type="text" name="subject" placeholder="Subject" />
           <textarea id="comment" name="comment" value="" cols="40" rows="13" maxlength="600"
@@ -294,10 +336,10 @@
           <div id="status__letter">The letter was sent</div>
           <div id="subject__letter"></div>
           <div id="description__letter"></div>
-        
+
           <button class="close-button" id="close__modal" title="Закрыть модальное окно">OK</button>
-          
-           
+
+
         </div>
 
       </div>
@@ -342,7 +384,7 @@
       </ul>
     </div>
   </footer>
-  <script src="./index.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
