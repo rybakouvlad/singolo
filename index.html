@@ -15,26 +15,23 @@
 <body>
 
   <header id="home">
-    <nav class="navigation-mobile">
+    <nav class="navigation-mobile " id = "navigation__mobile" >
 
-      <a class="navigation-touch" href="#mobile__nav">
+      <button class="navigation-touch" id="mobile-bar__down" onclick="location.href='#mobile__nav'" >
         <img src="./assets/Burger-menu-icon.png">
-      </a>
+      </button>
       <div class="mobile-nav" id="mobile__nav">
         <div class="mobile-size-bar">
-        <div class="row">
-          <a class="navigation-touch" href="#home">
+        <div class="row" id = "mobile-nav__active">
+          <button class="navigation-touch" id="mobile-bar__up" onclick="location.href='#home'" >
             <img src="./assets/Burger-menu-icon-off.png">
-          </a>
-
-          <div class="top-logo top-logo-mobile">
-            <a href="#home" >
+          </button>
+            <button class="top-logo top-logo-mobile" href="#home">
               <h1>SINGOLO<span>*</span></h1>
-            </a>
-          </div>
+            </button>          
         </div>
         
-        <ul id="navigation-bar">
+        <ul id="navigation-bar-mobile">
           <li><a href="#home">HOME</a></li>
           <li>
             <a href="#services">SERVICES</a>
@@ -221,7 +218,7 @@
     </div>
     <div class="portfolio-seleciton-block">
       <ul class="strategies_tags tags">
-        <li class="tag tag_bordered">All</li>
+        <li class="tag tag_selected">All</li>
         <li class="tag tag__web tag_bordered">Web Design</li>
         <li class="tag tag__design tag_bordered">Graphics Design</li>
         <li class="tag tag__art tag_bordered">Artwork</li>
@@ -323,7 +320,7 @@
 
           <input type="text" name="name" placeholder="Name (Required)" required />
 
-          <input type="email" name="email" placeholder="Email (Required)" />
+          <input type="email" name="email" placeholder="Email (Required)" required />
           <input type="text" name="subject" placeholder="Subject" />
           <textarea id="comment" name="comment" value="" cols="40" rows="13" maxlength="600"
             placeholder="Describe your project in detail..."></textarea>
@@ -337,9 +334,7 @@
           <div id="subject__letter"></div>
           <div id="description__letter"></div>
 
-          <button class="close-button" id="close__modal" title="Закрыть модальное окно">OK</button>
-
-
+          <button class="close-button" id="close__modal" title="Закрыть модальное окно"  onclick="event.preventDefault()">OK</button>
         </div>
 
       </div>
